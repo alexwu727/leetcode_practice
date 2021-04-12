@@ -1,7 +1,7 @@
 from problem_abc import ProblemAbc
 
 
-class Problem1(ProblemAbc):
+class Problem4(ProblemAbc):
     def __init__(self):
         self.url = "https://leetcode.com/problems/median-of-two-sorted-arrays/"
         self.test_cases = [([1, 3], [2]), ([1, 2], [3, 4]), ([0, 0], [0, 0]), ([], [1]), ([2], [])]
@@ -20,5 +20,5 @@ class Problem1(ProblemAbc):
 
 
 if __name__ == '__main__':
-    p = Problem1()
+    p = Problem4()
     p.submit()
