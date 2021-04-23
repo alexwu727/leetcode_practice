@@ -5,6 +5,7 @@ class ProblemAbc(ABC):
     url = ""
     test_cases = []
     y = []
+    adjust_output = False
 
     @abstractmethod
     def solution(self):
@@ -14,6 +15,8 @@ class ProblemAbc(ABC):
         print("problem url:", self.url)
         for i in range(len(self.test_cases)):
             output = self.solution(self.test_cases[i])
+            if self.adjust_output:
+                output = self.adjust_output(output)
             if output != self.y[i]:
                 print("===== wrong output ======")
                 print("------- test case -------")
