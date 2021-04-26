@@ -18,23 +18,23 @@ class Problem82(ProblemAbc):
 
         if not head or not head.next:
             return head
-        tmpVal = float("inf")
+        tmp_val = float("inf")
         ans = SinglyListNode()
-        ansCur = ans
+        ans_cur = ans
         while head and head.next:
-            if head.val == tmpVal:
+            if head.val == tmp_val:
                 pass
             elif head.val == head.next.val:
-                tmpVal = head.val
+                tmp_val = head.val
             else:
-                ansCur.next = head
-                ansCur = ansCur.next
+                ans_cur.next = head
+                ans_cur = ans_cur.next
             head = head.next
 
-        if head.val != tmpVal:
-            ansCur.next = head
+        if head.val != tmp_val:
+            ans_cur.next = head
         else:
-            ansCur.next = None
+            ans_cur.next = None
         return ans.next
 
 
