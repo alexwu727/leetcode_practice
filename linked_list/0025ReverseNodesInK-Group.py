@@ -1,6 +1,6 @@
 from problem_abc import ProblemAbc
-from nodes import list_to_nodes
-from nodes import nodes_to_list
+from linked_list.nodes import list_to_nodes
+from linked_list.nodes import nodes_to_list
 
 
 class Problem25(ProblemAbc):
