@@ -6,7 +6,7 @@ from binary_tree.nodes import BinaryTreeNode
 
 class Problem623(ProblemAbc):
     def __init__(self):
-        self.url = "https://leetcode.com/problems/merge-two-binary-trees/"
+        self.url = "https://leetcode.com/problems/add-one-row-to-tree/"
         self.test_cases = [([4, 2, 6, 3, 1, 5], 1, 2), ([4, 2, "null", 3, 1], 1, 3)]
         self.y = [[4, 1, 1, 2, "null", "null", 6, 3, 1, 5], [4, 2, "null", 1, 1, 3, "null", "null", 1]]
         self.adjust_output = nodes_to_list
