@@ -18,6 +18,8 @@ def nodes_to_list(root: BinaryTreeNode):
             queue += [node.left, node.right]
     while arr[-2:] == ["null", "null"]:
         arr = arr[:-2]
+    while arr[-1] == "null":
+        arr.pop()
     return arr
 
 
