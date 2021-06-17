@@ -12,7 +12,7 @@ class Problem658(ProblemAbc):
         arr = test_case[0]
         k = test_case[1]
         x = test_case[2]
-
+        # find the left-most index (O(logn))
         left = 0
         right = len(arr) - k
         while left < right:
@@ -22,6 +22,8 @@ class Problem658(ProblemAbc):
             else:
                 right = mid
         return arr[left:left + k]
+
+        # find the index of target number and compare closet number of it (O(klogn))
         left = 0
         right = len(arr) - 1
         target_index = -1
