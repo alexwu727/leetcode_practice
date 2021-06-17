@@ -93,5 +93,3 @@ if __name__ == '__main__':
     print("====" * len(arr_a))
     binary_search_b(arr_a, 3)
     print("====" * len(arr_a))
-    a = binary_search_c(arr_a, 1)
-    print(a)
