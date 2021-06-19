@@ -12,6 +12,29 @@ class Problem4(ProblemAbc):
         nums1 = test_case[0]
         nums2 = test_case[1]
 
+        # binary search
+        m, n = len(nums1), len(nums2)
+        if m > n:
+            nums1, nums2 = nums2, nums1
+            m, n = n, m
+        nums1 = [-float("inf")] + nums1 + [float("inf")]
+        nums2 = [-float("inf")] + nums2 + [float("inf")]
+        left = 0
+        right = m + 1
+        while left <= right:
+            mid = (left + right) // 2
+            tmp = (m + n) // 2 - mid
+            if nums1[mid] <= nums2[tmp + 1] and nums2[tmp] <= nums1[mid + 1]:
+                break
+            elif nums2[tmp] > nums1[mid + 1]:
+                left = mid + 1
+            else:
+                right = mid - 1
+
+        if (m + n) % 2 == 0:
+            return (max(nums1[mid], nums2[tmp]) + min(nums1[mid + 1], nums2[tmp + 1])) / 2
+        return min(nums1[mid + 1], nums2[tmp + 1])
+        # sorted array
         nums = sorted(nums1 + nums2)
         if len(nums) % 2 == 0:
             return (nums[len(nums) // 2] + nums[len(nums) // 2 - 1]) / 2
