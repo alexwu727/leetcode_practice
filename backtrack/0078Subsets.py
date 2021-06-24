@@ -3,7 +3,7 @@ from problem_abc import ProblemAbc
 
 class Problem78(ProblemAbc):
     def __init__(self):
-        self.url = "https://leetcode.com/problems/gray-code/"
+        self.url = "https://leetcode.com/problems/subsets/"
         self.test_cases = [[1, 2, 3], [0]]
         self.y = [[[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]], [[], [0]]]
         self.adjust_output = "any_order"
